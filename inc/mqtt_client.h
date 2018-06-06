@@ -26,7 +26,7 @@ class MqttClient : public mosquittopp {
 		int m_broker_port;
 		string m_client_id;
 		string m_broker_address;
-		BluetoothService *m_bluetooth_serivce;
+		BluetoothService *m_bluetooth_service;
 
 		void on_error(void);
 		void on_connect(int rc);

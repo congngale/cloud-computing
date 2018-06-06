@@ -16,7 +16,7 @@ OBJECTS = $(patsubst %.cc,%.o,$(SOURCES) $(PROGRAM).cc)
 INCLUDE_DIRS = -Iinc
 
 # include lib folders
-LIBRARY_DIRS = -Ilibs/tinyb/api -Ilibs/tinyb/include -Ilibs/mosquitto/lib -Ilibs/mosquitto/lib/cpp
+LIBRARY_DIRS = -Ilibs/tinyb/api -Ilibs/tinyb/include -Ilibs/mosquitto/lib -Ilibs/mosquitto/lib/cpp -Ilibs
 
 # include -l
 LDFLAGS = -ltinyb -lmosquittopp

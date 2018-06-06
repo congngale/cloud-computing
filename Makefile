@@ -35,12 +35,16 @@ CPPFLAGS = $(INCLUDE_DIRS) $(LIBRARY_DIRS)
 all: clean tinyb mosquitto  $(PROGRAM)
 
 tinyb:
+	@- rm libs/tinyb/build/CMakeCache.txt
+	@- cd libs/tinyb/build; cmake .. ; cd -
 	$(MAKE) -C libs/tinyb/build
 
 tinyb_clean:
 	$(MAKE) clean -C libs/tinyb/build
 
 mosquitto:
+	@- rm libs/mosquitto/CMakeCache.txt
+	@- cd libs/mosquitto; cmake . ; cd -
 	$(MAKE) -C libs/mosquitto
 
 mosquitto_clean:
